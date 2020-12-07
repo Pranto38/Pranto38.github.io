@@ -1,6 +1,6 @@
 var a=prompt("Enter Name");
- var b=prompt("Enter password");
-  	if(a== "sai" && b=="1902110")
+ var b=prompt("Enter Cadet no");
+  	if(a== "shupty" && b=="1946")
   	{
   	    window.location.href="index-particles.html";
   	}
