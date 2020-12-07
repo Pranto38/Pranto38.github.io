@@ -1,163 +1,22 @@
 <html>
   <head><title>Happy birthday</title>
-  </head>
+     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Particles - Created By www.roshinjose.com</title>
+</head>
+
 <body>
-  <style>
-  html, body {
-  height: 100%;
-}
-body {
-  background: black;
-  min-height: 100%;
-  overflow: hidden;
-}
-
-@keyframes move {
-  100% {
-    transform: translate3d(0, 0, -1000px);
-  }
-}
-.container {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  transform-style: preserve-3d;
+ <body>
+  <div id="particles-js">
+      <canvas height="651" width="1366" style="width: 100%; height: 100%;"></canvas>
   
-}
-.bubble-wrap {
-  margin: 0 auto;
-  width: 500px;
-  height: 500px;
-  transform-style: preserve-3d;
-  transform-origin: center center;
-  perspective: 600px;
-}
-.bubble {
-  position: absolute;
-  background: black;
-  opacity: .7;
-  border-radius: 50%;
-  animation: move 3s infinite;
-  
-}
 
-@for $i from 1 through 100 {
-  .bubble:nth-child(#{$i}){
-     $size: random(30)+px;
-     height: $size;
-     width: $size;
-     animation-delay: -$i * .2s;
-     transform: translate3d( (random(1000) * 1px),  (random(1000) * 1px), (random(2000) * 1px));
-     background: hsl( random(360) , 70%, 50%);
-  }
- 
-}
-</style>
+  <!-- JS -->
+  <script src="http://roshinjose.com/codepen/jquery_002.js"></script>
+  <script src="http://roshinjose.com/codepen/plugins.js"></script>
 
-<div class="container">
-  <div class="bubble-wrap">
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-</div>
-</div>
   <audio src="bday.mp3"></audio>
  <script> window.addEventListener("DOMContentLoaded", event => {
   const audio = document.querySelector("audio");
@@ -171,5 +30,6 @@ body {
 <div><center><iframe width="420" height="320" src="https://www.youtube.com/embed/PgJyMOeuNPQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  </center></div>
   <div><font color="red">Copyright © Pranto 2020</font></div>
+   </div>
 </body>
 </html>
