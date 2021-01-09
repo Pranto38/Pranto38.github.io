@@ -443,13 +443,13 @@ div#sea {
   }
 
   div#video {
-    right: 290px;
-    bottom: 235px;
+    right: 390px;
+    bottom: 335px;
   }
 
   div#video iframe {
-    width: 295px;
-    height: 185px;
+    width: 395px;
+    height: 285px;
   }
 
   .moon {
