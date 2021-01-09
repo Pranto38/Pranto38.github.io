@@ -287,7 +287,7 @@ function reveal() {
 
   var w, h;
   if (window.innerWidth >= 1000) {
-    w = 350;h = 245;
+    w = 395;h = 285;
   } else
   {
     w = 290;h = 185;
