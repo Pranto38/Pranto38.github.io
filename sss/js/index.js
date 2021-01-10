@@ -294,8 +294,8 @@ function reveal() {
   }
 
   var ifrm = document.createElement("iframe");
-  ifrm.setAttribute("src", "https://www.youtube.com/embed/e-orW_IF12BgI?controls=0&loop=1&autoplay=1");
- 
+  ifrm.setAttribute("src", "https://www.youtube.com/embed/orW_IF12BgI?controls=0&loop=1&autoplay=1");
+ https://youtu.be/orW_IF12BgI?t=1
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
