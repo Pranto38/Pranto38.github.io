@@ -133,7 +133,7 @@ div#sea {
   width: 100%;
   height: 100%;
   content: "";
-  box-shadow: inset 0 0 0 15px #fdc56d;
+  box-shadow: inset 0 0 0 15px #cc2137;
   border-radius: 30px;
   transform-origin: 50% 100%;
 }
@@ -154,7 +154,7 @@ div#sea {
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background: #fdc56d;
+  background: #cc2137;
 }
 .giftbox .box:after {
   width: 100%;
