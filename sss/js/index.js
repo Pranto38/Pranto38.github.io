@@ -279,7 +279,7 @@ window.onload = function () {
   init();
 
 };
-/*function reveal() {
+function reveal() {
   document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
 
   var w, h;
@@ -292,17 +292,17 @@ window.onload = function () {
   var img = document.createElement("img"); // Create an <img> element instead of <iframe>
 
   // Set the source URL of your image
-  img.src = "nusu.jpg"; // Replace "path_to_your_image.jpg" with the actual path to your image
+  img.src = "nusu.gif"; // Replace "path_to_your_image.jpg" with the actual path to your image
 
   img.style.border = 'none';
   img.style.width = w + 'px'; // Set the width of the image
   img.style.height = h + 'px'; // Set the height of the image
 
   document.querySelector('#imageContainer').appendChild(img); // Append the <img> element to an element with ID "imageContainer"
-}*/
+}
 
 
-function reveal() {
+/*function reveal() {
   document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
 
   loop();
@@ -322,5 +322,5 @@ function reveal() {
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
   document.querySelector('#video').appendChild(ifrm);
-} 
+} */
 
