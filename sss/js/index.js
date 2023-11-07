@@ -316,7 +316,7 @@ function reveal() {
   }
 
   var ifrm = document.createElement("iframe");
-  ifrm.setAttribute("src", "https://youtube.com/shorts/hHfpKGvQkCI");
+  ifrm.setAttribute("src", "https://www.youtube.com/embed/hHfpKGvQkC");
  //https://youtu.be/orW_IF12BgI?t=1
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
