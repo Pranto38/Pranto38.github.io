@@ -279,6 +279,28 @@ window.onload = function () {
   init();
 
 };
+/*function reveal() {
+  document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
+
+  var w, h;
+  if (window.innerWidth >= 1000) {
+    w = 295;h = 185;
+  } else {
+    w = 290;h = 185;
+  }
+
+  var img = document.createElement("img"); // Create an <img> element instead of <iframe>
+
+  // Set the source URL of your image
+  img.src = "nusu.jpg"; // Replace "path_to_your_image.jpg" with the actual path to your image
+
+  img.style.border = 'none';
+  img.style.width = w + 'px'; // Set the width of the image
+  img.style.height = h + 'px'; // Set the height of the image
+
+  document.querySelector('#imageContainer').appendChild(img); // Append the <img> element to an element with ID "imageContainer"
+}*/
+
 
 function reveal() {
   document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
@@ -294,11 +316,11 @@ function reveal() {
   }
 
   var ifrm = document.createElement("iframe");
-  ifrm.setAttribute("src", "https://www.youtube.com/embed/h1hHOMPRuzw?controls=0&loop=1&autoplay=1");
- https://youtu.be/orW_IF12BgI?t=1
+  ifrm.setAttribute("src", "https://youtube.com/shorts/hHfpKGvQkCI?feature=share");
+ //https://youtu.be/orW_IF12BgI?t=1
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
   document.querySelector('#video').appendChild(ifrm);
-}
+} 
 
