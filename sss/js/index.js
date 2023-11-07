@@ -284,21 +284,21 @@ function reveal() {
 
   var w, h;
   if (window.innerWidth >= 1000) {
-    w = 295;h = 185;
+    w = 295; h = 185;
   } else {
-    w = 290;h = 185;
+    w = 290; h = 185;
   }
 
-  var img = document.createElement("img"); // Create an <img> element instead of <iframe>
+  var gif = document.createElement("img"); // Create an <img> element instead of <iframe>
 
-  // Set the source URL of your image
-  img.src = "nusu.gif"; // Replace "path_to_your_image.jpg" with the actual path to your image
+  // Set the source URL of your GIF
+  gif.src = "nusu.gif"; // Replace "path_to_your_gif.gif" with the actual path to your GIF
 
-  img.style.border = 'none';
-  img.style.width = w + 'px'; // Set the width of the image
-  img.style.height = h + 'px'; // Set the height of the image
+  gif.style.border = 'none';
+  gif.style.width = w + 'px'; // Set the width of the GIF
+  gif.style.height = h + 'px'; // Set the height of the GIF
 
-  document.querySelector('#imageContainer').appendChild(img); // Append the <img> element to an element with ID "imageContainer"
+  document.querySelector('#gifContainer').appendChild(gif); // Append the <img> element to an element with ID "gifContainer"
 }
 
 
