@@ -28,13 +28,13 @@ div#beach {
   background-repeat: no-repeat;
 }
 
-div#video {
+div#gifContainer {
   position: absolute;
   right: 243px;
   bottom: 200px;
 }
 
-div#video iframe {
+div#gifContainer gif {
   width: 255px;
   height: 155px;
 }
