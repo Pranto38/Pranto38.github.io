@@ -279,7 +279,7 @@ window.onload = function () {
   init();
 
 };
-function reveal() {
+/*function reveal() {
   document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
 
   var w, h;
@@ -299,10 +299,10 @@ function reveal() {
   gif.style.height = h + 'px'; // Set the height of the GIF
 
   document.querySelector('#gifContainer').appendChild(gif); // Append the <img> element to an element with ID "gifContainer"
-}
+} */
 
 
-/*function reveal() {
+function reveal() {
   document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
 
   loop();
@@ -316,7 +316,7 @@ function reveal() {
   }
 
   var ifrm = document.createElement("iframe");
-  ifrm.setAttribute("src", "https://www.youtube.com/embed/hHfpKGvQkC");
+  ifrm.setAttribute("src", "HBD.mp4");
  //https://youtu.be/orW_IF12BgI?t=1
   //ifrm.style.width = `${w}px`;
   //ifrm.style.height = `${h}px`;
