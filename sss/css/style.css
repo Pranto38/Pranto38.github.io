@@ -442,12 +442,12 @@ div#sea {
     background-size: 2000px;
   }
 
-  div#video {
+  div#gifContainer {
     right: 290px;
     bottom: 235px;
   }
 
-  div#video iframe {
+  div#gifContainer gif {
     width: 295px;
     height: 185px;
   }
