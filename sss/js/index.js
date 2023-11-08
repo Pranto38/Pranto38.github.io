@@ -279,27 +279,6 @@ window.onload = function () {
   init();
 
 };
-/*function reveal() {
-  document.querySelector('.merrywrap').style.backgroundColor = 'transparent';
-
-  var w, h;
-  if (window.innerWidth >= 1000) {
-    w = 295; h = 185;
-  } else {
-    w = 290; h = 185;
-  }
-
-  var gif = document.createElement("gif"); // Create an <img> element instead of <iframe>
-
-  // Set the source URL of your GIF
-  gif.src = "nusu.gif"; // Replace "path_to_your_gif.gif" with the actual path to your GIF
-
-  gif.style.border = 'none';
-  gif.style.width = w + 'px'; // Set the width of the GIF
-  gif.style.height = h + 'px'; // Set the height of the GIF
-
-  document.querySelector('#gifContainer').appendChild(gif); // Append the <img> element to an element with ID "gifContainer"
-} */
 
 
 function reveal() {
@@ -317,10 +296,7 @@ function reveal() {
 
   var ifrm = document.createElement("iframe");
   ifrm.setAttribute("src", "HBD.mp4");
- //https://youtu.be/orW_IF12BgI?t=1
-  //ifrm.style.width = `${w}px`;
-  //ifrm.style.height = `${h}px`;
   ifrm.style.border = 'none';
   document.querySelector('#video').appendChild(ifrm);
-} */
+}
 
