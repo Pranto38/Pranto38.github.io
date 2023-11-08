@@ -289,7 +289,7 @@ function reveal() {
     w = 290; h = 185;
   }
 
-  var gif = document.createElement("img"); // Create an <img> element instead of <iframe>
+  var gif = document.createElement("gif"); // Create an <img> element instead of <iframe>
 
   // Set the source URL of your GIF
   gif.src = "nusu.gif"; // Replace "path_to_your_gif.gif" with the actual path to your GIF
