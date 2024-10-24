@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV and Her Egg</title>
+    <style>
+        body {
+            background-color: #ffe4e1; /* Light pink background */
+            font-family: 'Comic Sans MS', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            color: #ff69b4; /* Hot pink for the title */
+        }
+        #gameArea {
+            position: relative;
+            width: 90vw;
+            height: 70vh;
+            margin: auto;
+            border: 2px solid #ff1493; /* Deep pink border */
+            background-color: #ffb6c1; /* Light pink background for game area */
+        }
+        .character {
+            position: absolute;
+            width: 20vw; /* Make character larger */
+            height: auto;
+            max-width: 200px;
+            cursor: pointer;
+        }
+        .egg {
+            position: absolute;
+            width: 10vw; /* Adjusted size to be half of character */
+            height: auto;
+            max-width: 100px;
+            display: none;
+            transition: top 0.5s ease-out, left 0.5s ease-out;
+        }
+        #score {
+            font-size: 1.5em;
+            color: #c71585; /* Medium violet-red for the score text */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>BV and Her Egg</h1>
+    <div id="gameArea">
+        <img src="bv.png" id="character" class="character" alt="Character">
+        <img src="egg.png" id="egg" class="egg" alt="Egg">
+    </div>
+    <div id="score">Game Points: 0</div>
+
+    <script>
+        const character = document.getElementById('character');
+        const egg = document.getElementById('egg');
+        const gameArea = document.getElementById('gameArea');
+        const scoreDisplay = document.getElementById('score');
+
+        let movementPhase = 0;
+        let characterSpeed = 5; // Speed of the character's movement
+        let gamePoints = 0; // Initialize the game points
+
+        // Character movement function
+        function moveCharacter() {
+            let characterLeft = parseInt(window.getComputedStyle(character).left) || 0;
+            let characterTop = parseInt(window.getComputedStyle(character).top) || 0;
+
+            // Sequential movement patterns
+            switch (movementPhase) {
+                case 0: // Move right
+                    characterLeft += characterSpeed;
+                    if (characterLeft + character.offsetWidth >= gameArea.offsetWidth) movementPhase = 1;
+                    break;
+                case 1: // Move down
+                    characterTop += characterSpeed;
+                    if (characterTop + character.offsetHeight >= gameArea.offsetHeight) movementPhase = 2;
+                    break;
+                case 2: // Move left
+                    characterLeft -= characterSpeed;
+                    if (characterLeft <= 0) movementPhase = 3;
+                    break;
+                case 3: // Move up
+                    characterTop -= characterSpeed;
+                    if (characterTop <= 0) movementPhase = 4;
+                    break;
+                case 4: // Move side-to-side in the middle
+                    const middleY = gameArea.offsetHeight / 2 - character.offsetHeight / 2;
+                    characterTop = middleY;
+                    characterLeft += characterSpeed;
+                    if (characterLeft + character.offsetWidth >= gameArea.offsetWidth || characterLeft <= 0) {
+                        characterSpeed = -characterSpeed; // Reverse direction
+                    }
+                    break;
+            }
+
+            // Update the character's position
+            character.style.left = characterLeft + 'px';
+            character.style.top = characterTop + 'px';
+
+            // Move again
+            requestAnimationFrame(moveCharacter);
+        }
+
+        // Start moving the character
+        moveCharacter();
+
+        // Throw the egg when the game area is clicked
+        gameArea.addEventListener('click', () => {
+            // Set egg position to below the game area
+            egg.style.left = (gameArea.offsetWidth / 2 - egg.offsetWidth / 2) + 'px';
+            egg.style.top = gameArea.offsetHeight + 'px';
+            egg.style.display = 'block';
+            egg.src = 'egg.png'; // Reset the egg image to egg.png
+
+            // Simulate the egg being thrown upwards
+            setTimeout(() => {
+                egg.style.top = character.offsetTop + 'px';
+                egg.style.left = character.offsetLeft + 'px';
+
+                // Check collision with the character
+                setTimeout(() => {
+                    const eggRect = egg.getBoundingClientRect();
+                    const characterRect = character.getBoundingClientRect();
+
+                    if (eggRect.left < characterRect.right &&
+                        eggRect.right > characterRect.left &&
+                        eggRect.top < characterRect.bottom &&
+                        eggRect.bottom > characterRect.top) {
+                        // Change the egg to e.webp on successful hit
+                        egg.src = 'e.webp';
+                        // Increase the game points for a successful hit
+                        gamePoints += 1;
+                        scoreDisplay.textContent = `Game Points: ${gamePoints}`;
+                    }
+
+                    // Hide the egg after checking collision
+                    setTimeout(() => {
+                        egg.style.display = 'none';
+                    }, 500);
+                }, 500);
+            }, 100);
+        });
+    </script>
+</body>
+</html>
